@@ -9,10 +9,6 @@ server:
 # http://localhost:8093/h2-console
 # Enabling H2 Console
 spring:
-  boot:
-    admin:
-      client:
-        url: https://easycloud-admin-service.herokuapp.com
   h2:
     console:
       enabled: true
