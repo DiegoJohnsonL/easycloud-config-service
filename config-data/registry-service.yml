@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: easycloud-registry-service.herokuapp.com
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: https://easycloud-registry-service.herokuapp.com/eureka/
+      defaultZone: https://${eureka.instance.hostname}/eureka/
