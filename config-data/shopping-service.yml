@@ -46,7 +46,7 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://${eureka.instance.hostname}/eureka/
+      defaultZone: https://easycloud-registry-service.herokuapp.com/eureka/
 # Feign and Hystrix
 Feign:
   hystrix:
