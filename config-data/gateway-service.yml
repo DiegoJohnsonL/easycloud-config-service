@@ -13,19 +13,19 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: easycloud-pricing
-          uri: lb://easycloud-pricing
-          predicates:
-            - Path=/quote/**
-        - id: easycloud-scaling
-          uri: lb://easycloud-scaling
-          predicates:
-            - Path=/scale/**
-        - id: easycloud-visualization
-          uri: lb://easycloud-visualization
-          predicates:
-            - Path=/visualize/**
         - id: easycloud-security
-            uri: lb://easycloud-security
+            uri: https://security-service-upc.herokuapp.com/
             predicates:
               - Path=/security/**
+#        - id: easycloud-pricing
+#          uri:
+#          predicates:
+#            - Path=/quote/**
+#        - id: easycloud-scaling
+#          uri: lb://easycloud-scaling
+#          predicates:
+#            - Path=/scale/**
+#        - id: easycloud-visualization
+#          uri: lb://easycloud-visualization
+#          predicates:
+#            - Path=/visualize/**
