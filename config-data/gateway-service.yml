@@ -11,18 +11,18 @@ spring:
     gateway:
       routes:
       - id: easycloud-security
-        uri: lb://easycloud-security
+        uri: https://security-service-upc.herokuapp.com/
         predicates:
         - Path=/security/**
       - id: easycloud-pricing
-        uri: lb://easycloud-pricing
+        uri: http://easycloud-env.eba-6dy2ppey.us-east-1.elasticbeanstalk.com/
         predicates:
         - Path=/quote/**
       - id: easycloud-scaling
-        uri: lb://easycloud-scaling
+        uri: http://easycloudsca-env.eba-7mbw4wax.us-east-1.elasticbeanstalk.com/
         predicates:
         - Path=/scale/**
       - id: easycloud-visualization
-        uri: lb://easycloud-visualization
+        uri: http://easycloudvis-env.eba-ibhf7b3s.us-east-1.elasticbeanstalk.com/
         predicates:
         - Path=/visualize/**
