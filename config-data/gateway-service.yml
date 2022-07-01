@@ -15,7 +15,7 @@ spring:
         predicates:
         - Path=/security/**
       - id: easycloud-pricing
-        uri:
+        uri: lb://easycloud-pricing
         predicates:
         - Path=/quote/**
       - id: easycloud-scaling
