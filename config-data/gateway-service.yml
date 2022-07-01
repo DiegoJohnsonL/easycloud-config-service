@@ -1,17 +1,14 @@
 server:
   port: ${PORT:8080}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: https://easycloud-registry-service.herokuapp.com/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: https://easycloud-registry-service.herokuapp.com/eureka/
 
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
       routes:
         - id: easycloud-security
             uri: https://security-service-upc.herokuapp.com/
